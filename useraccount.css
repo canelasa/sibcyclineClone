@@ -1,0 +1,131 @@
+body {
+  background: #666;
+  margin: 0 auto;
+}
+
+nav {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 25px;
+  word-spacing: -5px;
+  width: 550px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+}
+
+nav li {
+  background: white;
+  word-spacing: 0;
+  width: 160px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  border-bottom: none;
+  font-family: geramond;
+  letter-spacing: 3px;
+  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+nav li:hover {
+  box-shadow: inset -50px 0 175px -50px rgba(0, 0, 0, 0.1);
+}
+
+nav li:active {
+  background: rgba(255,170,118, .5);
+}
+
+nav li span {
+  float: right;
+  font-weight: bold;
+  display: none;
+}
+
+nav li:hover span {
+  display: block;
+}
+
+nav div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  padding: 25px;
+  font-family: garamond;
+  word-spacing:3px;
+}
+
+nav li div {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  padding: 25px;
+  font-family: calibri;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+nav div h1 {
+  margin: 0 auto;
+  font-family: calibri light;
+  font-size: 25px;
+}
+
+nav li:focus {
+  outline: none;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+nav li:focus div {
+  display: block;
+}
+
+img {
+  height: 10em;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block !important;
+}
