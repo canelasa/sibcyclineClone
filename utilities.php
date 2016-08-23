@@ -58,15 +58,35 @@ function getFileCount ($directory){
 
 }
 
-// Echo the checked attribute if the specified input element was checked
+// Return the checked attribute if the specified input element was checked
 function saveChecked( $name, $value, $default )
 {
   // If the user did not select an option last time
   if( $default == true && isset( $_POST[ $name ] ) == false ){
-    echo "checked=checked";
+    return "checked=checked";
   }
   else if( $_POST[ $name ] == $value ){
-    echo "checked=checked";
+    return "checked=checked";
+  }
+  else
+  {
+    return "";
+  }
+}
+
+// Return the checked attribute if the specified input element was checked
+function saveSelected( $name, $value, $default )
+{
+  // If the user did not select an option last time
+  if( $default == true && isset( $_POST[ $name ] ) == false ){
+    return "checked=checked";
+  }
+  else if( $_POST[ $name ] == $value ){
+    return "checked=checked";
+  }
+  else
+  {
+    return "";
   }
 }
 
